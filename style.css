@@ -1,0 +1,76 @@
+/* Reset Global */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+body {
+background-color: #f4f4f9;
+}
+
+/* ❌ ERRO 1: A Navbar não está alinhada lado a lado e o texto tá colado na borda */
+.navbar {
+background-color: #2c3e50;
+color: white;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+display: flex;
+gap: 15px;
+
+/* Dica: os links estão grudados uns nos outros */
+}
+/* ❌ ERRO 2: Os cards estão um embaixo do outro ou espremidos na esquerda, colados nas bordas da tela */
+.grid-produtos {
+margin: 20px auto;
+max-width: 1200px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+/* Dica: Falta ativar o flexbox, quebrar a linha se a tela diminuir e centralizar! */
+}
+/* ❌ ERRO 3: Os cards não têm tamanho padrão e o conteúdo interno tá todo torto */
+.card {
+background: white;
+width: 280px;
+border-radius: 8px;
+padding: 15px;
+border: 1px solid #ddd;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+/* ❌ ERRO 4: As imagens estão ficando esticadas e desproporcionais */
+.card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 4px;
+/* Dica: Qual propriedade impede a imagem de distorcer? */
+}
+/* ❌ ERRO 5: O preço e o botão não ficam alinhados na base do card se o texto tiver tamanhos diferentes */
+.preco {
+font-weight: bold;
+font-size: 1.2rem;
+color: #27ae60;
+margin-top: auto;
+}
+
+button {
+background-color: #27ae60;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 4px;
+cursor: pointer;
+width: 100%;
+}
